@@ -5,26 +5,25 @@ document.addEventListener('keydown', e => {
   }
 });
 
-// Games list (display names cleaned up, files keep cl prefix)
+// Games list — no folder prefix, display names with spaces
 const games = [
-  { name: "Retro Bowl",               img: "https://i.ibb.co/3zXhY3P/retro-bowl.png", file: "games/clretrobowl.html" },
-  { name: "Drive Mad y",              img: "https://i.ibb.co/0jK0Y3K/drive-mad.png", file: "games/cldrivemady.html" },
-  { name: "Doom",                     img: "https://via.placeholder.com/220/222/fff?text=Doom", file: "games/cldoom.html" },
-  { name: "FNAF",                     img: "https://i.ibb.co/7p4n7vF/fnaf1.png", file: "games/clFNAF.html" },
-  { name: "FNAF 2",                   img: "https://i.ibb.co/3d3v7nK/fnaf2.png", file: "games/clFNAF2.html" },
-  { name: "Five Nights at Epsteins",  img: "https://via.placeholder.com/220/222/fff?text=FNAE", file: "games/clfiveNightsAtEpsteins.html" },
-  { name: "FNAF PS",                  img: "https://via.placeholder.com/220/222/fff?text=FNAFPS", file: "games/clfnfNAFps.html" },
-  { name: "Slope Plus",               img: "https://via.placeholder.com/220/222/fff?text=Slope+", file: "games/clslopeplus.html" },
-  { name: "Lithrio",                  img: "https://via.placeholder.com/220/222/fff?text=Lithrio", file: "games/cllithrio.html" },
-  { name: "Snow Rider",               img: "https://via.placeholder.com/220/222/fff?text=Snow+Rider", file: "games/clsnowrider.html" },
-  { name: "Subway Surfers Beijing",   img: "https://i.ibb.co/7v7p7nL/subway-surfers.png", file: "games/clsubwaysurfersbeijing.html" },
-  { name: "BitLife",                  img: "https://via.placeholder.com/220/222/fff?text=BitLife", file: "games/clbitlife.html" },
-  { name: "Escape Road",              img: "https://via.placeholder.com/220/222/fff?text=Escape+Road", file: "games/clescaperoad.html" },
-  { name: "Crazy Cattle 3D",          img: "https://i.ibb.co/0jK0Y3K/crazy-cattle.png", file: "games/clcrazycattle3d.html" },
-  { name: "Extreme Run 3D",           img: "https://via.placeholder.com/220/222/fff?text=Extreme+Run+3D", file: "games/clextremerun3d.html" },
-  { name: "House of Hazards",         img: "https://via.placeholder.com/220/222/fff?text=House+of+Hazards", file: "games/clhouseofhazards.html" },
-  { name: "Hard Water Tycoon",        img: "https://via.placeholder.com/220/222/fff?text=Hard+Water+Tycoon", file: "games/clhardwaterycoon.html" }
-  // Add more games here later if you want
+  { name: "Retro Bowl",               img: "https://i.ibb.co/3zXhY3P/retro-bowl.png", file: "clretrobowl.html" },
+  { name: "Drive Mad y",              img: "https://i.ibb.co/0jK0Y3K/drive-mad.png", file: "cldrivemady.html" },
+  { name: "Doom",                     img: "https://via.placeholder.com/220/222/fff?text=Doom", file: "cldoom.html" },
+  { name: "FNAF",                     img: "https://i.ibb.co/7p4n7vF/fnaf1.png", file: "clFNAF.html" },
+  { name: "FNAF 2",                   img: "https://i.ibb.co/3d3v7nK/fnaf2.png", file: "clFNAF2.html" },
+  { name: "Five Nights at Epsteins",  img: "https://via.placeholder.com/220/222/fff?text=FNAE", file: "clfiveNightsAtEpsteins.html" },
+  { name: "FNAF PS",                  img: "https://via.placeholder.com/220/222/fff?text=FNAFPS", file: "clfnfNAFps.html" },
+  { name: "Slope Plus",               img: "https://via.placeholder.com/220/222/fff?text=Slope+", file: "clslopeplus.html" },
+  { name: "Lithrio",                  img: "https://via.placeholder.com/220/222/fff?text=Lithrio", file: "cllithrio.html" },
+  { name: "Snow Rider",               img: "https://via.placeholder.com/220/222/fff?text=Snow+Rider", file: "clsnowrider.html" },
+  { name: "Subway Surfers Beijing",   img: "https://i.ibb.co/7v7p7nL/subway-surfers.png", file: "clsubwaysurfersbeijing.html" },
+  { name: "BitLife",                  img: "https://via.placeholder.com/220/222/fff?text=BitLife", file: "clbitlife.html" },
+  { name: "Escape Road",              img: "https://via.placeholder.com/220/222/fff?text=Escape+Road", file: "clescaperoad.html" },
+  { name: "Crazy Cattle 3D",          img: "https://i.ibb.co/0jK0Y3K/crazy-cattle.png", file: "clcrazycattle3d.html" },
+  { name: "Extreme Run 3D",           img: "https://via.placeholder.com/220/222/fff?text=Extreme+Run+3D", file: "clextremerun3d.html" },
+  { name: "House of Hazards",         img: "https://via.placeholder.com/220/222/fff?text=House+of+Hazards", file: "clhouseofhazards.html" },
+  { name: "Hard Water Tycoon",        img: "https://via.placeholder.com/220/222/fff?text=Hard+Water+Tycoon", file: "clhardwaterycoon.html" }
 ];
 
 // Render games
@@ -39,8 +38,8 @@ function render(query = "") {
 }
 
 // Play game
-function play(url) {
-  document.getElementById("gameFrame").src = url;
+function play(filename) {
+  document.getElementById("gameFrame").src = filename;
   document.getElementById("player").style.display = "block";
 }
 

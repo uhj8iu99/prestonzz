@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Google Docs</title>
+  <link rel="icon" href="https://ssl.gstatic.com/docs/documents/images/kix-favicon7.ico"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <div class="sidebar">
+    <h1 class="logo">Prestonz</h1>
+    <div class="tab active" data-tab="vault">Games Vault</div>
+    <div class="tab" data-tab="proxy">Web Tunnel</div>
+    <div class="tab" data-tab="settings">Settings</div>
+  </div>
+
+  <div class="main">
+    <div id="vault" class="page active">
+      <input type="text" class="search" placeholder="Search games..." oninput="search(this.value)"/>
+      <div class="grid" id="grid"></div>
+    </div>
+
+    <div id="proxy" class="page">
+      <iframe id="proxyframe" src="https://uv.holyubofficial.net/service/" sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-modals"></iframe>
+    </div>
+
+    <div id="settings" class="page">
+      <div class="settings-container">
+        <h2>Tab Cloaker</h2>
+        <input id="cloakTitle" placeholder="New tab title" value="Google Docs"/>
+        <button onclick="applyCloak()">Apply Cloak</button>
+
+        <h2>Panic Key</h2>
+        <p>Press <strong>Esc</strong> anytime to instantly go to Google Classroom.</p>
+      </div>
+    </div>
+
+    <div id="player">
+      <button class="close" onclick="closeGame()">Back</button>
+      <iframe id="gameFrame" sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-modals"></iframe>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
